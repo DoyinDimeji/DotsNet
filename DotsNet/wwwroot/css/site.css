@@ -1,0 +1,59 @@
+﻿body {
+    background-color:#0C1019;
+}
+
+.my-home {
+    height: 650px;
+    /*background-image: url(../img/w10.jpg);*/
+    background: linear-gradient(130deg, purple, orange);
+    background-position: center;
+    /*background-attachment: fixed;*/
+    /*background-repeat: no-repeat;*/
+    background-size: 400% 400%;
+    animation: BackgroundGradient 20s ease infinite;
+}
+
+@keyframes BackgroundGradient{
+    0% {
+        background-position:0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar-nav{
+    margin: auto;
+    font-size:small;
+}
+
+.collapse>ul>li{
+    margin:0 10px;
+}
+
+.hamburger,.hamburger>li{
+    margin: 0;
+}
+
+.touch {
+    color: white;
+    transform: translateX(3350%) translateY(2200%) ;
+    animation: UpandDown 1s ease infinite;
+    margin:0;
+    width:20px;
+}
+
+@keyframes UpandDown{
+    0% {
+        transform: translateX(3350%) translateY(2200%);
+    }
+    50% {
+        transform: translateX(3350%) translateY(2100%);
+    }
+    100% {
+        transform: translateX(3350%) translateY(2200%);
+    }
+}
