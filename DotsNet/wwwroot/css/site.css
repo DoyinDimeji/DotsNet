@@ -1,5 +1,6 @@
 ﻿body {
-    background-color:#0C1019;
+    background-color: #0C1019;
+    font-family: "Roboto",sans-serif;
 }
 
 .my-home {
@@ -13,47 +14,186 @@
     animation: BackgroundGradient 20s ease infinite;
 }
 
-@keyframes BackgroundGradient{
+@keyframes BackgroundGradient {
     0% {
-        background-position:0% 50%;
+        background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
-.navbar-nav{
+.navbar-nav {
     margin: auto;
-    font-size:small;
+    font-size: small;
 }
 
-.collapse>ul>li{
-    margin:0 10px;
+.collapse > ul > li {
+    margin: 0 10px;
 }
 
-.hamburger,.hamburger>li{
+.hamburger, .hamburger > li {
     margin: 0;
 }
 
 .touch {
     color: white;
-    transform: translateX(3350%) translateY(2200%) ;
+    transform: translateX(3180%) translateY(2200%) rotateX(0deg);
     animation: UpandDown 1s ease infinite;
-    margin:0;
-    width:20px;
+    width: 20px;
 }
 
-@keyframes UpandDown{
+@keyframes UpandDown {
     0% {
-        transform: translateX(3350%) translateY(2200%);
+        transform: translateX(3180%) translateY(2200%) rotateX(0deg);
     }
+
     50% {
-        transform: translateX(3350%) translateY(2100%);
+        transform: translateX(3180%) translateY(2100%) rotateX(180deg);
     }
+
     100% {
-        transform: translateX(3350%) translateY(2200%);
+        transform: translateX(3180%) translateY(2200%) rotateX(0deg);
     }
 }
+
+.social {
+    position: fixed;
+    z-index: 1;
+    transform: translateX(-50%) translateY(200%);
+}
+
+    .social > li {
+        display: block;
+        margin: 10px 0;
+    }
+
+        .social > li > a {
+            width: 20px;
+            height: 20px;
+            background: white;
+            color: orange;
+            border-radius: 50%;
+            display: block;
+            text-align: center;
+            line-height: 20px;
+            font-size: 10px;
+            animation: ColorChange 20s ease infinite;
+        }
+
+@keyframes ColorChange {
+    0% {
+        color: orange;
+    }
+
+    50% {
+        color: purple;
+    }
+
+    100% {
+        color: orange;
+    }
+}
+
+.main {
+    height: 2000px;
+    color: white;
+}
+
+.about {
+    margin: 50px 0;
+}
+
+    .about h1 {
+        overflow: hidden;
+        border-right: 3px solid white;
+        margin: 0 auto;
+        white-space: nowrap;
+        animation: typing 1.5s steps(40, start), blink-caret .75s step-end infinite;
+    }
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+    from,to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+.parallax {
+    height: 500px;
+    width: 100%;
+    /*background: url(../img/w10.jpg) no-repeat blue;*/
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+    .parallax > div {
+        height: 100%;
+        width: 60%;
+        /*transform: translateX(50%) translateY(50%);*/
+        margin: auto;
+        position: relative;
+        z-index: 1;
+    }
+
+        .parallax > div > div.pictureBox {
+            /*background-color:yellow;*/
+        }
+
+        .parallax > div > div > div.pictureCircle {
+            width: 150px;
+            height: 150px;
+            background-image: url(../img/IMG_20171212_161421_490.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 100%;
+        }
+
+        .parallax > div > div.storyBox {
+            /*background-color: blue;*/
+        }
+
+        .parallax > div > div > div.storyBox {
+        }
+
+#eduqual {
+    margin: auto;
+    height: 600px;
+    width: 80%;
+}
+
+.edubox {
+    width:25%;
+    height:100%;
+    background-color:white;
+    display:inline-block;
+    margin:0;
+}
+
+    /*.edubox:nth-child(odd) {
+        border: 2px solid Orange;
+    }
+    .edubox:nth-child(even) {
+        border: 2px solid Purple;
+    }*/
