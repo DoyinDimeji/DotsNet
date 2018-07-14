@@ -20,91 +20,207 @@
               integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
               crossorigin="anonymous" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Condensed" rel="stylesheet">
     </environment>
 </head>
 <body>
-    <div class="my-home">
-        <nav class="navbar navbar-expand-sm bg-transparent navbar-dark">
-            <a class="navbar-brand" href="#">
-                DotsNet
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">My Story</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                            Portfolio
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Education and Qualifications</a>
-                            <a class="dropdown-item" href="#">Skills and Tools</a>
-                            <a class="dropdown-item" href="#">Works and Experiences</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog and Shorts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog and Shorts</a>
-                    </li>
-                </ul>
-                <ul class="hamburger navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link">
-                            <span class="navbar-toggler-icon"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <p class="touch"><span class="fa fa-chevron-down"></span></p>
-        <ul class="social">
-            <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
-            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#"><span class="fa fa-google"></span></a></li>
-        </ul>
-    </div>
-    <section id="main">
-        <div class="about">
-            <div style="width:220px;margin:auto"><h1 class="text-center" id="aboutText" onload="changeText()">Hello World!</h1></div>
+    <div>
+        <div class="my-home">
+            <nav class="navbar navbar-expand-sm bg-transparent navbar-dark">
+                <a class="navbar-brand" href="#">
+                    DotsNet
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Story</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Portfolio
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Education and Qualifications</a>
+                                <a class="dropdown-item" href="#">Skills and Tools</a>
+                                <a class="dropdown-item" href="#">Works and Experiences</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog and Shorts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="hamburger navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="navbar-toggler-icon"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="upDownCaret"><p class="touch"><span class="fa fa-chevron-down"></span></p></div>
+            <ul class="social">
+                <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                <li><a href="#"><span class="fa fa-google"></span></a></li>
+            </ul>
         </div>
-        <div class="parallax">
+
+        <section @*id="particles-js" *@ class="main">
+            <div class="about">
+                <div style="width:180px;margin:auto"><h2 class="text-center" id="aboutText" onload="changeText()">Hello World!</h2></div>
+            </div>
+            <div class="parallax">
+                <div class="row">
+                    <div class="col-md-3 pictureBox">
+                        <div id="picture" class="pictureCircle"></div>
+                    </div>
+                    <div class="col-md-9 storyBox">
+                        <div class="storyCircle"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="eduqual">
             <div class="row">
-                <div class="col-md-3 pictureBox">
-                    <div id="picture"class="pictureCircle"></div>
+
+                <div class="col-md-3 edubox">
+                    <div class="boxtainer" id="primary">
+                        <div class="p-front" id="primaryFront">
+                            <div class="icondiv"><h1><span class="fa fa-book"></span></h1></div>
+                            <p>Primary</p>
+                        </div>
+                        <div class="p-back"></div>
+                        <div class="p-left"></div>
+                        <div class="p-right" id="primaryRight">
+                            <p>
+                                Out too the been like hard off. Improve enquire welcome own beloved matters her.
+                                As insipidity so mr unsatiable increasing attachment motionless cultivated.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-9 storyBox">
-                    <div class="storyCircle"></div>
+
+                <div class="col-md-3 edubox">
+                    <div class="boxtainer" id="secondary">
+                        <div class="p-front" id="secondaryFront">
+                            <div class="icondiv"><h1><span class="fa fa-bank"></span></h1></div>
+                            <p>Secondary</p>
+                        </div>
+                        <div class="p-back"></div>
+                        <div class="p-left"></div>
+                        <div class="p-right">
+                            <p>
+                                Out too the been like hard off. Improve enquire welcome own beloved matters her.
+                                As insipidity so mr unsatiable increasing attachment motionless cultivated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 edubox">
+                    <div class="boxtainer" id="tetiary">
+                        <div class="p-front" id="tetiaryFront">
+                            <div class="icondiv"><h1><span class="fa fa-mortar-board"></span></h1></div>
+                            <p>Tetiary</p>
+                        </div>
+                        <div class="p-back"></div>
+                        <div class="p-left"></div>
+                        <div class="p-right">
+                            <p>
+                                Out too the been like hard off. Improve enquire welcome own beloved matters her.
+                                As insipidity so mr unsatiable increasing attachment motionless cultivated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 edubox">
+                    <div class="boxtainer" id="others">
+                        <div class="p-front" id="othersFront">
+                            <div class="icondiv"><h1><span class="fa fa-briefcase"></span></h1></div>
+                            <p>Others...</p>
+                        </div>
+                        <div class="p-back"></div>
+                        <div class="p-left"></div>
+                        <div class="p-right">
+                            <p>
+                                Out too the been like hard off. Improve enquire welcome own beloved matters her.
+                                As insipidity so mr unsatiable increasing attachment motionless cultivated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="tools">
+            <div class="toolbox">
+                <div class="tools-top">
+                    <p>Software Development</p>
+                    <p>Graphics $ Design</p>
+                    <p>Photo Editing</p>
+                    <p>Video Editing</p>
+                    <p>Music</p>
+                </div>
+                <div class="tools-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="tools">
+                                <div class="toolsRow">
+                                    <div><img src="~/img/WhiteHTMLe.png"/></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="infographic">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="eduqual">
-        <div class="edubox primary">
+        </section>
 
-        </div>
-        <div class="edubox secondary">
+        <section id="expwork">
+            <div class="row">
+                <div class="col-md-9 pictures">
 
-        </div>
-        <div class="edubox tetiary">
+                </div>
+                <div class="col-md-3 description">
 
-        </div>
-        <div class="edubox other">
-
-        </div>
-    </section>
-
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    
+    
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/particlesjs/particles.min.js"></script>
+        <script src="~/lib/anime-master/anime.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/particle.js"></script>
+        <script src="~/js/eduqual.js"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -116,6 +232,14 @@
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"
+                asp-fallback-src="~/lib/particles.js-master/particles.min.js"
+                integrity="sha256-kncxKXqvBDAP95gzHNkf9R1FYZaP1/pMuabCim5Q4h8="
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"
+                asp-fallback-src="~/lib/anime-master/anime.min.js"
+                integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4="
                 crossorigin="anonymous"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
