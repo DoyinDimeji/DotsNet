@@ -6,6 +6,8 @@
     //$.each(eduqualArray, function (key,value) {
     //    console.log(key + ": " + value);
     //});
+
+
     var i = 0;
     $("#primaryFront").on({
         mouseenter: function () {
@@ -15,8 +17,19 @@
             $("#primaryFront>div").css("color", "white");
         }
     });
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log(xhttp.responseText);
+        }
+        xhttp.open("GET", "schooldetails.json", true);
+        xhttp.send();
+    }
     $("#primaryFront").click(function () {
+        j = 0; k = 0; x = 0;
         i++;
+
+        $("#secondaryRight>p").text("I have been rotated from primary button");
         if (i % 2 == 0) {
             if ($("#secondary").hasClass("rotate")) {
                 $("#secondary").removeClass("rotate");
@@ -77,6 +90,7 @@
         }
     });
     $("#secondaryFront").click(function () {
+        i = 0; k = 0; x = 0;
         j++;
         if (j % 2 == 0) {
             if ($("#primary").hasClass("rotate")) {
@@ -137,7 +151,9 @@
         }
     });
     $("#tetiaryFront").click(function () {
+        i = 0; j = 0; x = 0;
         k++;
+        $("#secondaryRight>p").text("I have been rotated from tetiary button");
         if (k % 2 == 0) {
             if ($("#secondary").hasClass("rotate")) {
                 $("#secondary").removeClass("rotate");
@@ -197,7 +213,9 @@
         }
     });
     $("#othersFront").click(function () {
+        i = 0; k = 0; k = 0;
         x++;
+        $("#secondaryRight>p").text("I have been rotated from others button");
         if (x % 2 == 0) {
             if ($("#secondary").hasClass("rotate")) {
                 $("#secondary").removeClass("rotate");
