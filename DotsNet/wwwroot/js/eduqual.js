@@ -17,18 +17,49 @@
             $("#primaryFront>div").css("color", "white");
         }
     });
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-            console.log(xhttp.responseText);
-        }
-        xhttp.open("GET", "schooldetails.json", true);
-        xhttp.send();
-    }
+
+    //Using the XMLHttpRequest to get data from the json file on the server:
+    var xmlhttp = new XMLHttpRequest();
+
     $("#primaryFront").click(function () {
         j = 0; k = 0; x = 0;
         i++;
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var obj = JSON.parse(this.responseText);
+                var address = obj.Edulevel[0].Address; $(".address>p").text(address);
+                var contact = obj.Edulevel[0].Contact; $(".contact>p").text(contact);
+                var duration = obj.Edulevel[0].Duration; $(".duration>p").text(duration);
+                $("#secondaryRight").css({
+                    "background-image": "url(../img/HeadsetSpace.jpg)", "background-position": "center",
+                    "background-repeat": "no-repeat",
+                    "background-size": "cover"
+                });
+                var txt = "";
+                txt += "<ul class='list-unstyled'><h3>Society(ies)</h3>"
+                for (j in obj.Edulevel[0].Societies) {
 
+                    txt += "<li><p>" + obj.Edulevel[0].Societies[j] + "</p></li>";
+
+                }
+                txt += "</ul>"
+                document.getElementById("societies").innerHTML = txt;
+
+                var txt = "";
+                txt += "<ul class='list-unstyled'><h3>Milestone(s)</h3>"
+                for (j in obj.Edulevel[0].Milestones) {
+
+                    txt += "<li><p>" + obj.Edulevel[0].Milestones[j] + "</p></li>";
+
+                }
+                txt += "</ul>"
+                document.getElementById("milestones").innerHTML = txt;
+
+                console.log(obj.Edulevel[0].Level);
+            }
+        };
+        xmlhttp.open("GET", "js/schooldetails.json", true);
+        xmlhttp.send();
         $("#secondaryRight>p").text("I have been rotated from primary button");
         if (i % 2 == 0) {
             if ($("#secondary").hasClass("rotate")) {
@@ -80,6 +111,7 @@
     });
 
 
+    //SECONDARY
     var j = 0;
     $("#secondaryFront").on({
         mouseenter: function () {
@@ -92,6 +124,39 @@
     $("#secondaryFront").click(function () {
         i = 0; k = 0; x = 0;
         j++;
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var obj = JSON.parse(this.responseText);
+                var address = obj.Edulevel[1].Level.SS.Address; $(".address>p").text(address);
+                var contact = obj.Edulevel[1].Level.SS.Contact; $(".contact>p").text(contact);
+                var duration = obj.Edulevel[1].Level.SS.Duration; $(".duration>p").text(duration);
+
+                var txt = "";
+                txt += "<ul class='list-unstyled'><h3>Society(ies)</h3>"
+                for (s in obj.Edulevel[1].Level.SS.Societies) {
+
+                    txt += "<li><p>" + obj.Edulevel[1].Level.SS.Societies[s] + "</p></li>";
+
+                }
+                txt += "</ul>"
+                document.getElementById("societies").innerHTML = txt;
+
+                var txt = "";
+                txt += "<ul class='list-unstyled'><h3>Milestone(s)</h3>"
+                for (s in obj.Edulevel[1].Level.SS.Milestones) {
+
+                    txt += "<li><p class='line-height'>" + obj.Edulevel[1].Level.SS.Milestones[s] + "</p></li>";
+
+                }
+                txt += "</ul>"
+                document.getElementById("milestones").innerHTML = txt;
+
+                console.log("adding " + obj.Edulevel[1].Level.SS.School);
+            }
+        };
+        xmlhttp.open("GET", "js/schooldetails.json", true);
+        xmlhttp.send();
+
         if (j % 2 == 0) {
             if ($("#primary").hasClass("rotate")) {
                 $("#primary").removeClass("rotate");
@@ -141,6 +206,8 @@
         }
     });
 
+
+    //TETIARY
     var k = 0;
     $("#tetiaryFront").on({
         mouseenter: function () {
@@ -153,6 +220,38 @@
     $("#tetiaryFront").click(function () {
         i = 0; j = 0; x = 0;
         k++;
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var obj = JSON.parse(this.responseText);
+                var address = obj.Edulevel[2].Address; $(".address>p").text(address);
+                var contact = obj.Edulevel[2].Contact; $(".contact>p").text(contact);
+                var duration = obj.Edulevel[2].Duration; $(".duration>p").text(duration);
+
+                var txt = "";
+                txt += "<ul class='list-unstyled'><h3>Society(ies)</h3>"
+                for (j in obj.Edulevel[2].Societies) {
+
+                    txt += "<li><p>" + obj.Edulevel[2].Societies[j] + "</p></li>";
+
+                }
+                txt += "</ul>"
+                document.getElementById("societies").innerHTML = txt;
+
+                var txt = "";
+                txt += "<ul class='list-unstyled'><h3>Milestone(s)</h3>"
+                for (j in obj.Edulevel[2].Milestones) {
+
+                    txt += "<li><p>" + obj.Edulevel[2].Milestones[j] + "</p></li>";
+
+                }
+                txt += "</ul>"
+                document.getElementById("milestones").innerHTML = txt;
+
+                console.log(obj.Edulevel[2].Level);
+            }
+        };
+        xmlhttp.open("GET", "js/schooldetails.json", true);
+        xmlhttp.send();
         $("#secondaryRight>p").text("I have been rotated from tetiary button");
         if (k % 2 == 0) {
             if ($("#secondary").hasClass("rotate")) {
@@ -203,6 +302,8 @@
         }
     });
 
+
+    //OTHER
     var x = 0;
     $("#othersFront").on({
         mouseenter: function () {

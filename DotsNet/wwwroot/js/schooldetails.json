@@ -4,97 +4,74 @@
       "Level": "Primary",
       "School": "Caleb International Schools",
       "Address": "Kayode Odusola Crescent off CMD/Magodo Road, Ikosi GRA, Lagos, Nigeria.",
-      "PhotoUrl": "~/img/schools/calebpic.jpg",
-      "Logo": "~/img/schools/caleblogo.jpg",
-      "Year": "2003 - 2007",
+      "Contact": "needToFindOut@caleb.com",
+      "Duration": "2003 - 2007",
       "Societies": [
         "Red Cross",
         "Boy Scout"
       ],
       "Milestones": [
-        {
-          "Certificate": "Primary School Leaving Certificate",
-          "Others": null
-        }
+        "Primary School Leaving Certificate",
+        "Double promotion"
       ]
     },
     {
-      "Level": [
-        {
-          "Junior Secondary": {
-            "School": "O'tega International Schools",
-            "Address": "Kayode Odusola Crescent off CMD/Magodo Road, Ikosi GRA, Lagos, Nigeria.",
-            "PhotoUrl": "~/img/schools/otegapic.jpg",
-            "Logo": "~/img/schools/otegalogo.jpg",
-            "Year": "2007 - 2010",
-            "Societies": [
-              "JET Club"
-            ],
-            "Milestones": [
-              {
-                "Certificate": "Junior NECO",
-                "Others": null
-              }
-            ]
-          },
-          "Senior Secondary": {
-            "School": "Christower International Schools",
-            "Address": "Kayode Odusola Crescent off CMD/Magodo Road, Ikosi GRA, Lagos, Nigeria.",
-            "PhotoUrl": "~/img/schools/ctpic.jpg",
-            "Logo": "~/img/schools/ctlogo.jpg",
-            "Year": "2010 - 2013",
-            "Societies": [
-              "JET Club"
-            ],
-            "Milestones": [
-              {
-                "Certificate": [
-                  "WAEC/SSCE","NECO","JAMB","GCE"
-                ],
-                "Others": [
-                  "Time Keeper",
-                  "Maintenance Prefect",
-                  "Labour Prefect",
-                  "Football Team Player",
-                  "Volleyball Team Player",
-                  "Track Athlete",
-                  "Cowbell Mathematics Competitor",
-                  "Winner of inter-school science quiz competition"
-                ]
-              }
-            ]
+      "Level": {
+        "JS": {
+          "School": "O'tega International Schools",
+          "Address": "somewhere at O'tega Int'l school",
+          "Duration": "2007 - 2010",
+          "Societies": [
+            "JET Club"
+          ],
+          "Milestones": {
+            "Certificate": "Junior NECO",
+            "Others": null
           }
+        },
+        "SS": {
+          "School": "Christower International Schools",
+          "Address": "Kayode Odusola Crescent off CMD/Magodo Road, Ikosi GRA, Lagos, Nigeria.",
+          "Contact": "toGet@Christower.com",
+          "Duration": "2010 - 2013",
+          "Societies": [
+            "JET Club",
+            "Football Team",
+            "Volleyball Team",
+            "Track Team"
+          ],
+          "Milestones": [
+            "WAEC/SSCE | NECO | JAMB | GCE",
+            "Time Keeper",
+            "Maintenance and Labour Prefect",
+            "Competed in Cowbell Mathematics Competition",
+            "Winner of science quiz competition"
+          ]
         }
-      ]
+      }
     },
     {
       "Level": "Tetiary",
       "School": "University of Lagos",
       "Address": "Akoka, Lagos, Nigeria",
-      "PhotoUrl": "~/img/schools/unilagpic.jpg",
-      "Logo": "~/img/schools/unilaglogo.jpg",
-      "Year": "2013 - 2018",
+      "Contact": "needToFindOut@unilag.com",
+      "Duration": "2013 - 2018",
       "Societies": [
         "Association of Systems Engineering Students",
-        "Engineering Opportunity Clinic Committee"
+        "Engineering Opportunity Clinic Committee",
+        "Microsoft Student Partner Community"
       ],
       "Milestones": [
-        {
-          "Certificate": "B.Sc, Systems Engineering (Ongoing*)",
-          "Others": [
-            "Microsoft Student Partner",
-            "Departmental Football Team",
-            "Programming Tutor (C#)"
-          ]
-        }
+        "B.Sc, Systems Engineering (Ongoing*)",
+        "Microsoft Student Partner",
+        "Departmental Football Team",
+        "Programming Tutor (C#)"
       ]
     },
     {
       "Level": "Others",
       "School": "Caleb International Schools",
       "Address": "Kayode Odusola Crescent off CMD/Magodo Road, Ikosi GRA, Lagos, Nigeria.",
-      "PhotoUrl": "~/img/schools/calebpic.jpg",
-      "Logo": "~/img/schools/caleblogo.jpg",
       "Year": "2003 - 2007",
       "Societies": [
         "Red Cross",

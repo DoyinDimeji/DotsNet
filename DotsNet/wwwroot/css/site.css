@@ -3,11 +3,6 @@
     /*font-family: 'Roboto', sans-serif;*/
 }
 
-.nav-link:hover {
-    text-decoration: underline;
-    text-decoration-color: white;
-}
-
 #particles-js {
     height: 100%;
 }
@@ -111,6 +106,31 @@
         color: orange;
     }
 }
+
+.navigator {
+    width: 40px;
+    position: fixed;
+    z-index: 1;
+    margin: 450px 0 0 95%;
+}
+
+    .navigator > p {
+        display: block;
+        margin: 10px 0;
+    }
+
+        .navigator > p > span {
+            width: 40px;
+            height: 40px;
+            background: white;
+            color: #0C1019;
+            border-radius: 50%;
+            display: block;
+            /*box-shadow:rgba(0,0,0,0.4) 10px 10px inset;*/
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+        }
 
 .main {
     height: 600px;
@@ -403,18 +423,6 @@
     background-color: purple;
 }
 
-/*img{
-    width:100%;
-    height:100%;  
-    display:block;
-}*/
-#secondaryRight {
-    background-image: url(../img/HeadsetSpace.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .textclass {
     padding: 5%;
 }
@@ -439,5 +447,9 @@
 
     .logo > h1 {
         display: table-cell;
-        vertical-align:middle;
+        vertical-align: middle;
     }
+
+.line-height {
+    line-height: 20px;
+}
